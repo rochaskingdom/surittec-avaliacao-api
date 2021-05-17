@@ -12,11 +12,10 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
   flyway:
     user: sa
     password: sa
-    schemas: avaliacao
     url: jdbc:h2:file:./target/classes/data/avaliacao;AUTO_SERVER=true
     locations: filesystem:src/main/resources/db/migration
     baseline-on-migrate: true
@@ -35,3 +34,7 @@ logging:
 cliente:
   message001: Nao existe cliente com este id
   message002: Um novo cliente nao pode ter um id
+
+jwt:
+  secret: 562455166
+  expiration: 86400000
