@@ -31,3 +31,7 @@ logging:
         deor:
           sql:
             BasicBinder: TRACE
+
+cliente:
+  message001: Nao existe cliente com este id
+  message002: Um novo cliente nao pode ter um id
