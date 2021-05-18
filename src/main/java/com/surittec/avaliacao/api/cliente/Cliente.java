@@ -1,8 +1,8 @@
 package com.surittec.avaliacao.api.cliente;
 
 
-import com.surittec.avaliacao.api.email.Email;
-import com.surittec.avaliacao.api.telefone.Telefone;
+import com.surittec.avaliacao.api.cliente.email.Email;
+import com.surittec.avaliacao.api.cliente.telefone.Telefone;
 import com.surittec.avaliacao.api.utils.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;

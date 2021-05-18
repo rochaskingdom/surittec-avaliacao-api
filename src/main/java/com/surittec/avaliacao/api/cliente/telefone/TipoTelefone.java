@@ -1,4 +1,4 @@
-package com.surittec.avaliacao.api.telefone;
+package com.surittec.avaliacao.api.cliente.telefone;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import org.springframework.http.HttpStatus;

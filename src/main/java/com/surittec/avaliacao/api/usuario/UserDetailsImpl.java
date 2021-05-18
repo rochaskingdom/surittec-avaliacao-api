@@ -26,7 +26,7 @@ public class UserDetailsImpl implements UserDetails {
         this.password = user.getPassword();
 
         final SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getUserRole().getDescricao());
-        this.authorities = Collections.unmodifiableCollection(Collections.singleton(authority));
+        this.authorities = Collections.singleton(authority);
     }
 
     @Override

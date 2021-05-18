@@ -1,4 +1,4 @@
-package com.surittec.avaliacao.api.telefone;
+package com.surittec.avaliacao.api.cliente.email;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.surittec.avaliacao.api.cliente.Cliente;
@@ -8,28 +8,22 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class Telefone extends BaseEntity {
+public class Email extends BaseEntity {
 
-    @NotBlank
-    @Column(name = "NUMERO")
-    private String numero;
-
-    @NotNull
-    @Column(name = "TIPO")
-    @Enumerated(EnumType.STRING)
-    private TipoTelefone tipoTelefone;
+    @NotEmpty
+    @javax.validation.constraints.Email
+    private String email;
 
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "CLIENTE_ID")
     private Cliente cliente;
 }

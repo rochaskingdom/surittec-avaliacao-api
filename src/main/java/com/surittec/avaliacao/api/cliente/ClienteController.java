@@ -17,7 +17,7 @@ public class ClienteController {
     private final ClienteService clienteService;
 
     @GetMapping
-    public List<Cliente> listaTodosCliente() {
+    public List<Cliente> listaClientes() {
         return clienteService.lista();
     }
 
@@ -28,7 +28,7 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> criaCliente(@Valid @RequestBody Cliente cliente) {
+    public ResponseEntity<Cliente> insereCliente(@Valid @RequestBody Cliente cliente) {
         return clienteService.insere(cliente);
     }
 
@@ -38,7 +38,7 @@ public class ClienteController {
     }
 
     @DeleteMapping("/{clienteId}")
-    public ResponseEntity<Void> deletaCliente(@PathVariable Long clienteId) {
+    public ResponseEntity<Void> excluiCliente(@PathVariable Long clienteId) {
         return clienteService.exclui(clienteId);
     }
 }
